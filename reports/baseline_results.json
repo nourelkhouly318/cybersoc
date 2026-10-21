@@ -1,0 +1,59 @@
+{
+  "rule_baseline": {
+    "rule": "label = 1 if sttl >= 62",
+    "accuracy": 0.7663,
+    "precision": 0.7024,
+    "recall": 0.9987,
+    "f1": 0.8248,
+    "false_positive_rate": 0.5183,
+    "confusion": {
+      "tn": 17822,
+      "fp": 19178,
+      "fn": 61,
+      "tp": 45271
+    }
+  },
+  "rf_binary": {
+    "fit_seconds": 25.5,
+    "accuracy": 0.8715,
+    "precision": 0.8173,
+    "recall": 0.9874,
+    "f1": 0.8943,
+    "false_positive_rate": 0.2704,
+    "confusion": {
+      "tn": 26994,
+      "fp": 10006,
+      "fn": 572,
+      "tp": 44760
+    },
+    "top_features": {
+      "sttl": 0.0805,
+      "ct_state_ttl": 0.0602,
+      "rate": 0.0581,
+      "dload": 0.0553,
+      "sload": 0.0524,
+      "dttl": 0.0398,
+      "sbytes": 0.0389,
+      "ct_srv_dst": 0.0366,
+      "dbytes": 0.0349,
+      "dpkts": 0.0331
+    }
+  },
+  "rf_multiclass": {
+    "accuracy": 0.7502,
+    "macro_f1": 0.4833,
+    "weighted_f1": 0.7844,
+    "per_class_f1": {
+      "Analysis": 0.036,
+      "Backdoor": 0.062,
+      "DoS": 0.255,
+      "Exploits": 0.702,
+      "Fuzzers": 0.391,
+      "Generic": 0.983,
+      "Normal": 0.853,
+      "Reconnaissance": 0.854,
+      "Shellcode": 0.504,
+      "Worms": 0.192
+    }
+  }
+}

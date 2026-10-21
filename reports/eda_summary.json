@@ -1,0 +1,146 @@
+{
+  "train": {
+    "rows": 175341,
+    "columns": 45,
+    "numeric_features": 39,
+    "categorical_features": 3,
+    "missing_cells": 0,
+    "duplicate_rows_excl_id": 67601,
+    "constant_features": [],
+    "service_dash_share": 0.5371,
+    "infinite_values": 0,
+    "label_counts": {
+      "normal": 56000,
+      "attack": 119341
+    },
+    "attack_cat_counts": {
+      "Normal": 56000,
+      "Generic": 40000,
+      "Exploits": 33393,
+      "Fuzzers": 18184,
+      "DoS": 12264,
+      "Reconnaissance": 10491,
+      "Analysis": 2000,
+      "Backdoor": 1746,
+      "Shellcode": 1133,
+      "Worms": 130
+    }
+  },
+  "test": {
+    "rows": 82332,
+    "columns": 45,
+    "numeric_features": 39,
+    "categorical_features": 3,
+    "missing_cells": 0,
+    "duplicate_rows_excl_id": 26387,
+    "constant_features": [],
+    "service_dash_share": 0.5727,
+    "infinite_values": 0,
+    "label_counts": {
+      "normal": 37000,
+      "attack": 45332
+    },
+    "attack_cat_counts": {
+      "Normal": 37000,
+      "Generic": 18871,
+      "Exploits": 11132,
+      "Fuzzers": 6062,
+      "DoS": 4089,
+      "Reconnaissance": 3496,
+      "Analysis": 677,
+      "Backdoor": 583,
+      "Shellcode": 378,
+      "Worms": 44
+    }
+  },
+  "proto_unique_train": 133,
+  "service_unique_train": 13,
+  "state_unique_train": 9,
+  "categories_only_in_test": {
+    "proto": [],
+    "service": [],
+    "state": [
+      "ACC",
+      "CLO"
+    ]
+  },
+  "top_label_correlations": {
+    "sttl": 0.693,
+    "ct_state_ttl": 0.578,
+    "dload": 0.394,
+    "ct_dst_sport_ltm": 0.357,
+    "dmean": 0.342,
+    "rate": 0.338,
+    "swin": 0.334,
+    "dwin": 0.32,
+    "ct_src_dport_ltm": 0.306,
+    "ct_dst_src_ltm": 0.304
+  },
+  "redundant_pairs_gt_0_95": [
+    [
+      "spkts",
+      "sbytes",
+      0.964
+    ],
+    [
+      "spkts",
+      "sloss",
+      0.971
+    ],
+    [
+      "dpkts",
+      "dbytes",
+      0.972
+    ],
+    [
+      "dpkts",
+      "dloss",
+      0.979
+    ],
+    [
+      "sbytes",
+      "sloss",
+      0.996
+    ],
+    [
+      "dbytes",
+      "dloss",
+      0.997
+    ],
+    [
+      "swin",
+      "dwin",
+      0.99
+    ],
+    [
+      "ct_srv_src",
+      "ct_dst_src_ltm",
+      0.967
+    ],
+    [
+      "ct_srv_src",
+      "ct_srv_dst",
+      0.98
+    ],
+    [
+      "ct_dst_ltm",
+      "ct_src_dport_ltm",
+      0.962
+    ],
+    [
+      "ct_dst_src_ltm",
+      "ct_srv_dst",
+      0.972
+    ],
+    [
+      "is_ftp_login",
+      "ct_ftp_cmd",
+      1.0
+    ]
+  ],
+  "figures": [
+    "class_distribution.png",
+    "protocols.png",
+    "label_correlation.png"
+  ]
+}
